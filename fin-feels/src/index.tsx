@@ -1,11 +1,20 @@
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
+import ProfileA from './ProfileA';
+import ProfileB from './ProfileB';
 import registerServiceWorker from './registerServiceWorker';
+import './index.css';
 
 ReactDOM.render(
-  <App />,
+   <Router>
+    <div>
+      <Route exact path="/" component={App} />
+      <Route exact path="/profileA" component={ProfileA} />
+      <Route exact path="/profileB" component={ProfileB} />
+    </div>
+  </Router>,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
