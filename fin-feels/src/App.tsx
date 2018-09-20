@@ -1,17 +1,28 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
 import ProfileBubble from './ProfileBubble';
+
+var girl = '/images/girl0.jpeg';
+var boy = '/images/p1.jpeg';
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">FIN FEELS</h1>
-        </header>
-        <div><Link to='/profileA'>Profile A</Link></div>
-        <ProfileBubble pid={0} name="Jamie Corr" location="Los Angeles" emotion="happy" description="" timeStamp="2018-09-20T08:57:27" image=""/>
+      <div id="main">
+        <div id="title">
+          <div id="edit">
+            <a href="swatch.html" class="btn btn-success btn-sml">
+              <span class="glyphicon glyphicon-pencil"></span> 
+            </a>
+            <a href="preload.html" class="btn btn-danger btn-sml">
+              <span class="glyphicon glyphicon-off"></span> 
+            </a>
+          </div>
+          <div id="heading">
+            <h1>FIN FEELS</h1>
+          </div>
+        </div>
+        <div id="profiles"></div>
       </div>
     );
   }
