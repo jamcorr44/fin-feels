@@ -11,8 +11,9 @@ class ProfileBubble extends React.Component<PersonInterface, {}> {
   	render() {
     	return (
 			<div className="profile">
-                <img src={this.props.image} width="140"/>
-                <div><Link to='/profileA'>{this.props.name}</Link></div>
+                        <img src={this.props.image} width="140"/>
+                             <div><Link to='/profile'>{this.props.name}</Link></div>
+
 			</div>
         );
 	}
